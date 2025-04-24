@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/book",
+      "methods": ["POST"],
+      "dest": "/api/book.ts"
+    },
+    {
+      "src": "/api/pay",
+      "methods": ["POST"],
+      "dest": "/api/pay.ts"
+    },
+    {
+      "src": "/api/track",
+      "methods": ["GET"],
+      "dest": "/api/track.ts"
+    }
+  ]
+}

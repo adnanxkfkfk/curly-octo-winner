@@ -2,7 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.ts",
+      "src": "book.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "pay.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "track.ts",
       "use": "@vercel/node"
     }
   ],
@@ -10,17 +18,17 @@
     {
       "src": "/api/book",
       "methods": ["POST"],
-      "dest": "/api/book.ts"
+      "dest": "/book.ts"
     },
     {
       "src": "/api/pay",
       "methods": ["POST"],
-      "dest": "/api/pay.ts"
+      "dest": "/pay.ts"
     },
     {
       "src": "/api/track",
       "methods": ["GET"],
-      "dest": "/api/track.ts"
+      "dest": "/track.ts"
     }
   ]
 }
